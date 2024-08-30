@@ -12,26 +12,34 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Back"
-        android:layout_gravity="start"
         android:layout_marginBottom="16dp"/>
 
-    <!-- EditText for taking notes -->
+    <!-- TextView to display goals -->
+    <TextView
+        android:id="@+id/goals_display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your goals will appear here"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Add New Goal Input and Button -->
     <EditText
         android:id="@+id/notes_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter your goals"
-        android:gravity="top"
-        android:inputType="textMultiLine"
-        android:minLines="6"/>
+        android:hint="Enter new goal"
+        android:layout_marginBottom="16dp"/>
 
-    <!-- Save Button (Optional) -->
     <Button
         android:id="@+id/save_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Save"
-        android:layout_gravity="end"
-        android:layout_marginTop="16dp"/>
+        android:text="Save Goal"/>
 
+    <!-- Button to View Goals -->
+    <Button
+        android:id="@+id/view_goals_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Goals"/>
 </LinearLayout>
