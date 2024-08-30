@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#f4f4f4">
+
+    <!-- Streak Display -->
+    <TextView
+        android:id="@+id/streak_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Streak: 5 Days"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="32dp"/>
+
+    <!-- Take Quiz Button -->
+    <Button
+        android:id="@+id/quiz_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Take Quiz"
+        android:textColor="#FFF"
+        android:background="#3F51B5"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Go to Forum Button -->
+    <Button
+        android:id="@+id/forum_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Go to Forum"
+        android:textColor="#FFF"
+        android:background="#FF9800"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Run a Simulation Button -->
+    <Button
+        android:id="@+id/simulation_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Run a Simulation"
+        android:textColor="#FFF"
+        android:background="#4CAF50"
+        android:layout_marginTop="16dp"/>
+
+    <!-- My Goals Button -->
+    <Button
+        android:id="@+id/goals_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="My Goals"
+        android:textColor="#FFF"
+        android:background="#2196F3"
+        android:layout_marginTop="16dp"/>
+
+    <!-- My Courses Button -->
+    <Button
+        android:id="@+id/courses_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="My Courses"
+        android:textColor="#FFF"
+        android:background="#673AB7"
+        android:layout_marginTop="16dp"/>
+
+</LinearLayout>
