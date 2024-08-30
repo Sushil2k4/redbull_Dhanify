@@ -1,0 +1,43 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.dhanify">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+        <!-- LoginActivity needs android:exported since it has an intent filter -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true"> <!-- Set exported to true or false based on your needs -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- MainActivity does not need to be exported if it's only used internally -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+
+        <!-- GoalsActivity does not need to be exported as it's not intended to be accessible by other apps -->
+        <activity
+            android:name=".GoalsActivity"
+            android:exported="false" />
+
+        <!-- CoursesActivity does not need to be exported as it's not intended to be accessible by other apps -->
+        <activity
+            android:name=".CoursesActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".QuizActivity"
+            android:exported="false" />
+
+    </application>
+
+</manifest>
