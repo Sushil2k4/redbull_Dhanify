@@ -2,6 +2,7 @@ package com.example.dhanify;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -9,48 +10,68 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static final String TAG = "MainActivity";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Take Quiz button
+        // Initialize Take Quiz button
         Button quizButton = findViewById(R.id.quiz_button);
-        quizButton.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, QuizActivity.class);
-            startActivity(intent);
-        });
+        if (quizButton != null) {
+            quizButton.setOnClickListener(v -> {
+                Intent intent = new Intent(MainActivity.this, QuizActivity.class);
+                startActivity(intent);
+            });
+        } else {
+            Log.e(TAG, "Quiz button not found");
+        }
 
-        // Go to Forum button (remove or replace this section if ForumActivity is not available)
+        // Initialize Go to Forum button (if implemented)
         Button forumButton = findViewById(R.id.forum_button);
-        forumButton.setOnClickListener(v -> {
-            // If ForumActivity is not available, you can replace it with another activity
-            // or comment out this section
-            // Intent intent = new Intent(MainActivity.this, ForumActivity.class);
-            // startActivity(intent);
-        });
+        if (forumButton != null) {
+            forumButton.setOnClickListener(v -> {
+                Log.w(TAG, "ForumActivity not implemented");
+            });
+        } else {
+            Log.e(TAG, "Forum button not found");
+        }
 
-        // Run a Simulation button (remove or replace this section if SimulationActivity is not available)
+        // Initialize Run a Simulation button (if implemented)
         Button simulationButton = findViewById(R.id.simulation_button);
-        simulationButton.setOnClickListener(v -> {
-            // If SimulationActivity is not available, you can replace it with another activity
-            // or comment out this section
-            // Intent intent = new Intent(MainActivity.this, SimulationActivity.class);
-            // startActivity(intent);
-        });
+        if (simulationButton != null) {
+            simulationButton.setOnClickListener(v -> {
+                Log.w(TAG, "SimulationActivity not implemented");
+            });
+        } else {
+            Log.e(TAG, "Simulation button not found");
+        }
 
-        // My Goals button - navigate to GoalsActivity
+        // Initialize My Goals button
         Button goalsButton = findViewById(R.id.goals_button);
-        goalsButton.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, GoalsActivity.class);
-            startActivity(intent);
-        });
+        if (goalsButton != null) {
+            goalsButton.setOnClickListener(v -> {
+                try {
+                    Intent intent = new Intent(MainActivity.this, GoalsActivity.class);
+                    startActivity(intent);
+                } catch (Exception e) {
+                    Log.e(TAG, "Failed to start GoalsActivity", e);
+                }
+            });
+        } else {
+            Log.e(TAG, "Goals button not found");
+        }
 
-        // My Courses button - navigate to CoursesActivity
+        // Initialize My Courses button
         Button coursesButton = findViewById(R.id.courses_button);
-        coursesButton.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, CoursesActivity.class);
-            startActivity(intent);
-        });
+        if (coursesButton != null) {
+            coursesButton.setOnClickListener(v -> {
+                Intent intent = new Intent(MainActivity.this, CoursesActivity.class);
+                startActivity(intent);
+            });
+        } else {
+            Log.e(TAG, "Courses button not found");
+        }
     }
 }
